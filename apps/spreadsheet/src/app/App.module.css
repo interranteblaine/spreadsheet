@@ -1,1 +1,18 @@
-/* Your styles goes here. */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+    background-color: var(--subtle-background);
+    border-bottom: 2px solid var(--subtle-border-non-interactive);
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--high-contrast-text);
+}
+
+.content {
+    margin: 15px 10px;
+}

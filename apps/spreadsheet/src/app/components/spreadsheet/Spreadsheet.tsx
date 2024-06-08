@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './Spreadsheet.module.css';
-import Row from '../row/Row';
+import Row from './Row';
 import { RootState } from '../../store';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -22,7 +22,7 @@ function Spreadsheet({ initialData }: SpreadsheetProps) {
   );
 
   return (
-    <div>
+    <div className={styles.spreadsheet}>
       {Array.from({ length: rows }, (_, rowIndex) => (
         <Row key={rowIndex} rowIndex={rowIndex} />
       ))}

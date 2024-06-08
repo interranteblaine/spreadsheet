@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import Cell from '../cell/Cell';
-import styles from './Row.module.css';
+import Cell from './Cell';
+import styles from './Spreadsheet.module.css';
 import { RootState } from '../../store';
 
 interface RowProps {

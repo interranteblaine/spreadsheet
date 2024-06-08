@@ -1,0 +1,32 @@
+.spreadsheet {
+
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    border: 1px solid var(--subtle-border-interactive);
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: background-color var(--color-transition), border-color var(--color-transition);
+    background-color: var(--normal-background);
+    cursor: pointer;
+    color: var(--high-contrast-text);
+}
+
+.cell.selected {
+    border-color: var(--strong-border-interactive);
+    background-color: var(--hovered-background);
+    color: var(--high-contrast-text);
+}
+
+.editing {
+    border-color: var(--strong-border-interactive);
+    background-color: var(--active-background);
+    color: var(--high-contrast-text);
+    cursor: text;
+}
