@@ -1,0 +1,9 @@
+{
+  "name": "spreadsheet",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/spreadsheet/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project spreadsheet --web",
+  "targets": {}
+}

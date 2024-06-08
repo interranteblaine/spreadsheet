@@ -1,0 +1,14 @@
+.input {
+    border: 1px solid gray;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .selected {
+    background-color: lightblue;
+  }
+  
+  .unselected {
+    background-color: white;
+  }
