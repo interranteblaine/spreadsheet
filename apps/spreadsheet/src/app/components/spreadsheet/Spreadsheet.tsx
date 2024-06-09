@@ -28,11 +28,6 @@ function Spreadsheet({ initialData }: SpreadsheetProps) {
           <Row key={rowIndex} rowIndex={rowIndex} />
         ))}
       </tbody>
-      <tfoot>
-        <tr>
-          <td colSpan={3}>Footer</td>
-        </tr>
-      </tfoot>
     </table>
   );
 }

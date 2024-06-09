@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import spreadsheetSlice from './spreadsheetSlice';
+import themeSlice from './themeSlice';
 
 const store = configureStore({
   reducer: {
     spreadsheet: spreadsheetSlice,
+    theme: themeSlice,
   },
 });
 
