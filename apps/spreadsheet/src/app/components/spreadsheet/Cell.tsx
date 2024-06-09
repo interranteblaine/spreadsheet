@@ -41,22 +41,26 @@ function Cell({ rowIndex, colIndex }: CellProps) {
     dispatch(stopEditingCell({ row: rowIndex, col: colIndex }));
   };
 
-  let className = styles.cell;
+  let className = styles.td;
   if (cell.isEditing) className += ` ${styles.editing}`;
   if (cell.isSelected) className += ` ${styles.selected}`;
 
   return (
-    <input
-      ref={inputRef}
-      type="text"
-      value={cell.value}
-      onChange={handleChange}
+    <td
+      className={className}
       onClick={handleClick}
       onDoubleClick={handleDoubleClick}
-      onBlur={handleBlur}
-      className={className}
-      readOnly={!cell.isEditing}
-    />
+    >
+      <input
+        ref={inputRef}
+        type="text"
+        value={cell.value}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        className={className}
+        readOnly={!cell.isEditing}
+      />
+    </td>
   );
 }
 

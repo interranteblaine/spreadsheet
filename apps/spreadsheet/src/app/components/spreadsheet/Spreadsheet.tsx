@@ -17,16 +17,23 @@ function Spreadsheet({ initialData }: SpreadsheetProps) {
     dispatch(setSpreadsheet(initialData));
   }, [dispatch, initialData]);
 
-  const rows = useSelector(
-    ({ spreadsheet: { data } }: RootState) => data.length
-  );
+  const rows = useSelector(({ spreadsheet: { data } }: RootState) => {
+    return data.length;
+  });
 
   return (
-    <div className={styles.spreadsheet}>
-      {Array.from({ length: rows }, (_, rowIndex) => (
-        <Row key={rowIndex} rowIndex={rowIndex} />
-      ))}
-    </div>
+    <table>
+      <tbody>
+        {Array.from({ length: rows }, (_, rowIndex) => (
+          <Row key={rowIndex} rowIndex={rowIndex} />
+        ))}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colSpan={3}>Footer</td>
+        </tr>
+      </tfoot>
+    </table>
   );
 }
 

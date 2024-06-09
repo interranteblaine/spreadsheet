@@ -32,16 +32,18 @@ export function App() {
 
   return (
     <Provider store={store}>
-      <nav className={`${styles.navbar}`}>
+      <header className={styles.header}>
         <h1>
           <span> Hello there, </span>
           welcome to spreadsheet 👋
         </h1>
-        <Button variant="primary" onClick={toggleTheme}>
-          {theme === 'light' ? 'Dark' : 'Light'} Theme
-        </Button>
-      </nav>
-      <main className={styles.content}>
+        <nav className={styles.nav}>
+          <Button variant="primary" onClick={toggleTheme}>
+            {theme === 'light' ? 'Dark' : 'Light'} Theme
+          </Button>
+        </nav>
+      </header>
+      <main className={styles.main}>
         <Spreadsheet initialData={initialData} />
       </main>
     </Provider>

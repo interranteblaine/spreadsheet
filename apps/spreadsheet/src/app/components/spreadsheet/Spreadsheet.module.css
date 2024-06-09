@@ -1,12 +1,12 @@
-.spreadsheet {
+.table {
 
 }
 
-.row {
+.tr {
     display: flex;
 }
 
-.cell {
+.td {
     border: 1px solid var(--subtle-border-interactive);
     padding: 5px;
     width: 100%;
@@ -18,13 +18,13 @@
     color: var(--high-contrast-text);
 }
 
-.cell.selected {
+.td.selected {
     border-color: var(--strong-border-interactive);
     background-color: var(--hovered-background);
     color: var(--high-contrast-text);
 }
 
-.editing {
+.td.editing {
     border-color: var(--strong-border-interactive);
     background-color: var(--active-background);
     color: var(--high-contrast-text);

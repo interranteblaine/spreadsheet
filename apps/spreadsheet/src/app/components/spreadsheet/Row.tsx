@@ -13,7 +13,7 @@ function Row({ rowIndex }: RowProps) {
   );
 
   return (
-    <div className={styles.row}>
+    <tr className={styles.tr}>
       {Array.from({ length: cols }, (_, colIndex) => (
         <Cell
           key={`${rowIndex}-${colIndex}`}
@@ -21,7 +21,7 @@ function Row({ rowIndex }: RowProps) {
           colIndex={colIndex}
         />
       ))}
-    </div>
+    </tr>
   );
 }
 
